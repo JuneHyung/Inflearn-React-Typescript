@@ -8,6 +8,7 @@ interface InitState{
 }
 
 class GuGuDan extends Component<{}, InitState> {
+  
   state = {
     first: Math.ceil(Math.random() * 9),
     second: Math.ceil(Math.random() * 9),
@@ -49,22 +50,23 @@ class GuGuDan extends Component<{}, InitState> {
   onRefInput = (c: HTMLInputElement) => {
     this.input = c;
   };
-
-  return() {
-    <>
-      <div>
-        {this.state.first} 곱하기 {this.state.second}는?
-      </div>
-      <form onSubmit={this.onSubmitForm}>
-        <input
-          ref={this.onRefInput}
-          type="number"
-          value={this.state.value}
-          onChange={this.onChange}
-        />
-      </form>
-      <div>{this.state.result}</div>
-    </>;
+  render(){
+    return(
+      <>
+        <div>
+          {this.state.first} 곱하기 {this.state.second}는?
+        </div>
+        <form onSubmit={this.onSubmitForm}>
+          <input
+            ref={this.onRefInput}
+            type="number"
+            value={this.state.value}
+            onChange={this.onChange}
+          />
+        </form>
+        <div>{this.state.result}</div>
+      </>
+    )
   }
 }
 
