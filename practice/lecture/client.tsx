@@ -7,7 +7,8 @@ const ReactDOM = require('react-dom');
 // const ResponseCheck = require('./ResponseCheck');
 // const RSP = require('./RSP');
 // const Lotto = require('./Lotto');
-const TicTacToe = require('./tictactoe/TicTacToe.jsx');
+// const TicTacToe = require('./tictactoe/TicTacToe.jsx');
+const MineSearch = require('./mineSearch/MineSearch.jsx');
 
 
 // ReactDOM.render(<GuGuDan />, document.querySelector('#root'))
@@ -15,4 +16,5 @@ const TicTacToe = require('./tictactoe/TicTacToe.jsx');
 // ReactDOM.render(<NumberBaseball />, document.querySelector('#root'))
 // ReactDOM.render(<RSP />, document.querySelector('#root'))
 // ReactDOM.render(<Lotto />, document.querySelector('#root'))
-ReactDOM.render(<TicTacToe />, document.querySelector('#root'))
+// ReactDOM.render(<TicTacToe />, document.querySelector('#root'))
+ReactDOM.render(<MineSearch />, document.querySelector('#root'))
