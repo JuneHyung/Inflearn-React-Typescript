@@ -8,7 +8,8 @@ const ReactDOM = require('react-dom');
 // const RSP = require('./RSP');
 // const Lotto = require('./Lotto');
 // const TicTacToe = require('./tictactoe/TicTacToe.jsx');
-const MineSearch = require('./mineSearch/MineSearch.jsx');
+// const MineSearch = require('./mineSearch/MineSearch.jsx');
+const Games = require('./react-router/Games.tsx');
 
 
 // ReactDOM.render(<GuGuDan />, document.querySelector('#root'))
@@ -17,4 +18,5 @@ const MineSearch = require('./mineSearch/MineSearch.jsx');
 // ReactDOM.render(<RSP />, document.querySelector('#root'))
 // ReactDOM.render(<Lotto />, document.querySelector('#root'))
 // ReactDOM.render(<TicTacToe />, document.querySelector('#root'))
-ReactDOM.render(<MineSearch />, document.querySelector('#root'))
+// ReactDOM.render(<MineSearch />, document.querySelector('#root'))
+ReactDOM.render(<Games />, document.querySelector('#root'))
