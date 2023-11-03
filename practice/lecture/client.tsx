@@ -9,7 +9,13 @@ const ReactDOM = require('react-dom');
 // const Lotto = require('./Lotto');
 // const TicTacToe = require('./tictactoe/TicTacToe.jsx');
 // const MineSearch = require('./mineSearch/MineSearch.jsx');
-const Games = require('./react-router/Games.tsx');
+// const Games = require('./react-router/Games.tsx');
+
+import {Provider} from 'react-redux';
+import store from './redux/store';
+// const App = require('./redux/AppClass.tsx');
+const App = require('./redux/App.tsx');
+
 
 
 // ReactDOM.render(<GuGuDan />, document.querySelector('#root'))
@@ -19,4 +25,10 @@ const Games = require('./react-router/Games.tsx');
 // ReactDOM.render(<Lotto />, document.querySelector('#root'))
 // ReactDOM.render(<TicTacToe />, document.querySelector('#root'))
 // ReactDOM.render(<MineSearch />, document.querySelector('#root'))
-ReactDOM.render(<Games />, document.querySelector('#root'))
+// ReactDOM.render(<Games />, document.querySelector('#root'))
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+  , document.querySelector('#root')
+)
