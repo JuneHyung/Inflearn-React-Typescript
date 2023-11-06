@@ -1,5 +1,11 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+// const React = require('react');
+// const ReactDOM = require('react-dom');
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+
+import App from './mobx/App';
+import {StoreProvider} from './mobx/context';
+
 
 // const GuGuDan = require('./GuGuDan');
 // const WordRelay = require('./WordRelay');
@@ -11,10 +17,10 @@ const ReactDOM = require('react-dom');
 // const MineSearch = require('./mineSearch/MineSearch.jsx');
 // const Games = require('./react-router/Games.tsx');
 
-import {Provider} from 'react-redux';
-import store from './redux/store';
+// import {Provider} from 'react-redux';
+// import store from './redux/store';
 // const App = require('./redux/AppClass.tsx');
-const App = require('./redux/App.tsx');
+// const App = require('./redux/App.tsx');
 
 
 
@@ -27,8 +33,8 @@ const App = require('./redux/App.tsx');
 // ReactDOM.render(<MineSearch />, document.querySelector('#root'))
 // ReactDOM.render(<Games />, document.querySelector('#root'))
 ReactDOM.render(
-  <Provider store={store}>
+  <StoreProvider>
     <App />
-  </Provider>
+  </StoreProvider>
   , document.querySelector('#root')
 )
